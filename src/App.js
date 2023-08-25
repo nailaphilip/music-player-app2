@@ -5,6 +5,7 @@ import { MusicContext } from "./contexts/MusicContext";
 import { PlayerControls } from "./components/PlayerControls";
 
 import { useState } from "react";
+import TrackList from "./components/TrackList";
 
 function App() {
   const [state, setState] = useState({
@@ -35,6 +36,7 @@ function App() {
     <MusicContext.Provider value={[state, setState]}>
       <div className="App">
         <PlayerControls />
+        <TrackList />
       </div>
     </MusicContext.Provider>
   );
